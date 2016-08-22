@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="javascript/vue.js"></script>
+    <script type="text/javascript" src="javascript/marked.js"></script>
+    <script type="text/javascript" src="javascript/index.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="topBar">
+        <div id="title"></div>
+        <div id="toolBar">
+            <button class="toolButton" value="FILE">FILE</button>
+            <button class="toolButton" value="SAVE">SAVE</button>
+            <button class="toolButton" value="MODE">MODE</button>
+        </div>
+    </div>
+    <div id="editor">
+        <textarea id="inputText" v-model="text"></textarea>
+        <div id="markdownContent" v-html="text|marked"></div>
+    </div>
+</body>
+</html>

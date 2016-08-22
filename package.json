@@ -1,0 +1,14 @@
+{
+  "name": "tarossnote",
+  "version": "0.0.1",
+  "description": "ERROR: No README data found!",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+      "browserify":"13.1.0"
+  },
+  "author": "",
+  "license": "BSD"
+}
