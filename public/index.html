@@ -16,8 +16,11 @@
         </div>
     </div>
     <div id="editor">
-        <textarea id="inputText" v-model="text"></textarea>
-        <div id="markdownContent" v-html="text|marked"></div>
+        <div id="editorAria">
+            <textarea id="inputText" v-model="text"></textarea>
+            <div id="markdownContent" v-html="text|marked"></div>
+        </div>
+        <div id="textHeader" v-for="chapter in chapters"></div>
     </div>
 </body>
 </html>

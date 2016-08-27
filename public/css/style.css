@@ -10,6 +10,15 @@ body{
     background-color: rgb(50,120,80);
 }
 
+#textHeader{
+    position: absolute;
+    height: 85vh;
+    width: 15vh;
+    top: 15vh;
+    left:0vw;
+    color:rgb(200,200,200);
+}
+
 #toolBar{
     position:absolute;
     top:50%;
@@ -32,7 +41,7 @@ body{
     border-bottom: 5px solid rgb(30,100,60);
 }
 
-#editor{
+#editorAria{
     position: absolute;
     top:15vh;
     left:15vw;
@@ -46,7 +55,7 @@ textarea#inputText{
     left:0%;
     width:50%;
     height: 100%;
-    background-color: rgb(215,215,215);
+    background-color: rgb(245,245,245);
     resize:none;
     font-size:16px;
 }
