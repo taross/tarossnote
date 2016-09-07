@@ -2,25 +2,40 @@
 <html>
 <head>
     <script type="text/javascript" src="javascript/vue.js"></script>
+    <script type="text/javascript" src="javascript/jquery-3.1.0.min.js"></script>
     <script type="text/javascript" src="javascript/marked.js"></script>
-    <script type="text/javascript" src="javascript/index.js"></script>
+    <script type="text/javascript" src="javascript/editor.js"></script>
+    <script type="text/javascript" src="javascript/directHome.js"></script>
+    <script type="text/javascript" src="javascript/saveFile.js"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div id="topBar">
-        <div id="title"></div>
-        <div id="toolBar">
-            <button class="toolButton" value="FILE">FILE</button>
-            <button class="toolButton" value="SAVE">SAVE</button>
-            <button class="toolButton" value="MODE">MODE</button>
-        </div>
+
+    <div id="home">
+        <div id="load"></div>
+        <div id="add"></div>
+        <div id="memo"></div>
     </div>
+
     <div id="editor">
+
+        <div id="topBar">
+            <div id="toolBar">
+                <button class="toolButton" onclick="directHome()">HOME</button>
+                <button class="toolButton" onclick="saveFile()" id="save">SAVE</button>
+            </div>
+        </div>
+
         <div id="editorAria">
-            <textarea id="inputText" v-model="text"></textarea>
+            <textarea id="inputText" v-model="text" v-on:keyup="scrollDown"></textarea>
             <div id="markdownContent" v-html="text|marked"></div>
         </div>
-        <div id="textHeader" v-for="chapter in chapters"></div>
+        <div id="textHeader">
+            <div  v-for="chapter in chapters" class="chap">
+                {{ chapter.text }}
+            </div>
+        </div>
     </div>
+
 </body>
 </html>
