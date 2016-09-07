@@ -2,7 +2,7 @@
   "name": "tarossnote",
   "version": "0.0.1",
   "description": "ERROR: No README data found!",
-  "main": "server.js",
+  "main": "main.js",
   "scripts": {
     "start": "node server.js"
   },
